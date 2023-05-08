@@ -8,7 +8,6 @@ const Character = ({ id, name, gender, height }) => {
       <h1>Name: {name}</h1>
       <h2>Gender: {gender}</h2>
       <h2>Height: {height} cm</h2>
-      <DeleteButton name={id} />
     </>
   );
 };
