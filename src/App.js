@@ -1,5 +1,6 @@
 import "./App.css";
-import { useFetch } from "./useFetch";
+import { useFetch } from "./hooks/useFetch";
+import Character from "./components/Character";
 
 function App() {
   const { data, loading, error } = useFetch(
@@ -13,8 +14,15 @@ function App() {
         <ul>
           {error && <li>Error: {error}</li>}
           {loading && <li>Loading...</li>}
-          {data?.map((user) => (
-            <li key={user.name}>{user.name}</li>
+          {data?.map((char) => (
+            <div className="card" key={char.id}>
+              <Character
+                id={char.id}
+                name={char.name}
+                gender={char.gender}
+                height={char.height}
+              />
+            </div>
           ))}
         </ul>
       </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 
 export function useFetch(url) {
   const [data, setData] = useState(null);
@@ -12,10 +11,11 @@ export function useFetch(url) {
       .then((response) => response.json())
       .then((data) =>
         setData(
-          data.results.map(({ name, gender, birth_year }) => ({
-            name,
-            gender,
-            birth_year,
+          data.results.map((char) => ({
+            id: Number(char.url.split("/").filter(Boolean).pop()),
+            name: char.name,
+            gender: char.gender,
+            height: char.height,
           }))
         )
       )
