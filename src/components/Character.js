@@ -1,14 +1,14 @@
 import React from "react";
-import DeleteButton from "./DeleteButton";
 
-const Character = ({ id, name, gender, height }) => {
+const Character = ({ name, gender, height }) => {
   return (
-    <>
-      <h1>Id: {id}</h1>
-      <h1>Name: {name}</h1>
-      <h2>Gender: {gender}</h2>
-      <h2>Height: {height} cm</h2>
-    </>
+    <div class="card text-white bg-dark" style={{ maxWidth: 18 + "rem" }}>
+      <div class="card-body" style={{ marginBottom: 0 }}>
+        <h3 class="card-title">{name}</h3>
+        <p class="card-text">Gender: {gender}.</p>
+        <p class="card-text">Height: {height} cm.</p>
+      </div>
+    </div>
   );
 };
 
