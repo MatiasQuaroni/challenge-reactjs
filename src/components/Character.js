@@ -1,13 +1,20 @@
 import React from "react";
+import Icon from "../assets/deathStar.png";
 
 const Character = ({ name, gender, height }) => {
   return (
-    <div class="card text-white bg-dark" style={{ maxWidth: 18 + "rem" }}>
-      <div class="card-body" style={{ marginBottom: 0 }}>
+    <div class="card-body" style={{ paddingBottom: 0 }}>
+      <div class="card-icon">
+        <img class="img-fluid" src={Icon} />
+
         <h3 class="card-title">{name}</h3>
-        <p class="card-text">Gender: {gender}.</p>
-        <p class="card-text">Height: {height} cm.</p>
       </div>
+      <p class="card-text ">
+        <span class="fw-bold">Gender: </span> {gender}
+      </p>
+      <p class="card-text">
+        <span class="fw-bold">Height: </span> {height} cm
+      </p>
     </div>
   );
 };

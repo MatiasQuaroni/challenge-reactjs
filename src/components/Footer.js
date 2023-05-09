@@ -3,7 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <p>By Tuvieja</p>
+      <body>
+        <div id="wrapper">
+          <div id="footer">Desafio ReactJS - Matias Quaroni</div>
+        </div>
+      </body>
     </>
   );
 };
